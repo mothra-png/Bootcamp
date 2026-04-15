@@ -1,101 +1,92 @@
-# Stellar Notes DApp
+# Stellar Movie Watchlist Smart Contract DApp
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+**Stellar Movie Watchlist Smart Contract DApp** - Blockchain-Based Decentralized Movie Tracking System
 
 ## Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+This project is a simple decentralized movie watchlist application built using Soroban smart contract on Stellar. The purpose of this app is to help users store and manage a list of movies they want to watch directly on the blockchain.
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+Each movie has a unique ID, a title, and a status that indicates whether the movie has been watched or not.
 
 ## Project Vision
 
-Our vision is to revolutionize personal productivity in the digital age by:
+Our vision is to improve how users manage personal entertainment lists in a decentralized way by:
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
+- Decentralizing Data: Storing movie watchlists on a blockchain instead of centralized platforms
+- Ensuring Ownership: Giving users full control over their personal watchlist data
+- Guaranteeing Transparency: All actions are recorded and verifiable on the blockchain
+- Enhancing Security: Preventing unauthorized modification of stored data
+- Building Trustless Systems: Ensuring data integrity through smart contract logic
 
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
+We aim to create a simple but reliable system where users can track their movie lists securely and independently.
 
 ## Key Features
 
-### 1. **Simple Note Creation**
+### 1. **Add Movie**
 
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
+- Add movies to your personal watchlist
+- Each movie includes a title and a unique ID
+- Automatically sets the movie as "not watched"
+- Stored permanently on the blockchain
 
-### 2. **Efficient Data Retrieval**
+### 2. **View Movie List**
 
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
+- Retrieve all stored movies in one function
+- Displays movie title and watched status
+- Easy to integrate with frontend applications
 
-### 3. **Secure Deletion**
+### 3. **Mark Movie as Watched**
 
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
+- Update movie status to "watched"
+- Based on unique movie ID
+- Helps track which movies are completed
 
-### 4. **Transparency and Security**
+### 4. **Delete Movie**
 
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
+- Remove a movie from the watchlist
+- Uses unique ID for accuracy
+- Keeps storage clean and organized
 
-### 5. **Stellar Network Integration**
+### 5. **Blockchain-Based Storage**
 
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
+- All data is stored on Stellar blockchain
+- Transparent and tamper-proof system
+- Fast and low-cost transactions using Soroban
 
 ## Contract Details
 
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
+- Contract Address: b3bd9a65a90d23e746aad37ede5ba07844fe39d9813e3e210398939421cc5761
   ![alt text](screenshot.png)
 
 ## Future Scope
 
 ### Short-Term Enhancements
 
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
+1. **Input Validation**: Improve validation for movie titles
+2. **Search Feature**: Allow users to search movies by title
+3. **Filter System**: Separate watched and unwatched movies
+4. **Better UI Integration**: Connect with a simple frontend interface
 
 ### Medium-Term Development
 
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
+5. **User-Based Watchlist**: Separate movie lists for different users
+6. **Rating System**: Allow users to rate movies
+7. **Favorite Movies**: Add a feature to mark favorite movies
+8. **History Tracking**: Track when a movie was added or watched
 
 ### Long-Term Vision
 
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
+9. **Cross-Platform Integration**: Sync with external movie databases
+10. **Decentralized Frontend**: Host UI on IPFS
+11. **Recommendation System**: Suggest movies based on user activity
+12. **AI Integration**: Provide smart movie recommendations
 
 ### Enterprise Features
 
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
+13. **Shared Watchlist**: Allow multiple users to collaborate
+14. **Analytics Dashboard**: Show user watching patterns
+15. **Content Categorization**: Group movies by genre
+16. **Multi-Language Support**: Support global users
 
 ---
 
@@ -107,12 +98,13 @@ We envision a future where digital information is truly personal and sovereign, 
 
 ## Getting Started
 
-Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
+Deploy the smart contract to Stellar's Soroban network and interact with it using the main functions:
 
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
+add_movie() → Add a new movie to the watchlist
+get_movies() → Retrieve all stored movies
+mark_watched() → Mark a movie as watched
+delete_movie() → Remove a movie by its ID
 
 ---
 
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+**Stellar Movie Watchlist Smart Contract DApp** - Blockchain-Based Decentralized Movie Tracking System
