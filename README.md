@@ -56,7 +56,8 @@ We aim to create a simple but reliable system where users can track their movie 
 ## Contract Details
 
 - Contract Address: b3bd9a65a90d23e746aad37ede5ba07844fe39d9813e3e210398939421cc5761
-  ![alt text](screenshot.png)
+  ![alt text](<img width="1919" height="967" alt="image" src="https://github.com/user-attachments/assets/05d4b9b1-09d1-4eae-bd75-1d6a014f4c3a" />
+)
 
 ## Future Scope
 
