@@ -20,3 +20,4 @@ Add a new movie to the watchlist
 View all saved movies
 Mark a movie as watched
 Delete a movie from the list
+
